@@ -1,0 +1,76 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shipping</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shipping</BasePath>
+      <RelativePath>companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>v3a6tg1itn</Fingerprint>
+      <Integrity>q4WuvIwjZmhDzEn7srM2XV56JXNfb9ZruTIJ61wjfdw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shipping</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shipping</BasePath>
+      <RelativePath>companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a7p1hhgw7d</Fingerprint>
+      <Integrity>1srtN+2En39+z7DLOM2CagFvisU14IJNYzojt86IIgw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shipping</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shipping</BasePath>
+      <RelativePath>companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a7p1hhgw7d</Fingerprint>
+      <Integrity>1srtN+2En39+z7DLOM2CagFvisU14IJNYzojt86IIgw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shipping</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shipping</BasePath>
+      <RelativePath>companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>v3a6tg1itn</Fingerprint>
+      <Integrity>q4WuvIwjZmhDzEn7srM2XV56JXNfb9ZruTIJ61wjfdw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\companies\797259dd-9f77-459a-9d03-90e8cdbbce3d\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
