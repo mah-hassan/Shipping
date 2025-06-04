@@ -2,7 +2,7 @@ namespace Shipping.Entities;
 
 public class Role : Entity
 {
-    public Role() : base(Guid.NewGuid())
+    public Role() 
     {
     }
     public required string Name { get; init; }

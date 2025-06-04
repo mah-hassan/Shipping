@@ -6,7 +6,7 @@ public class GetChatByIdEndpoint(ShippingDbContext dbContext) : EndpointWithoutR
 {
     public override void Configure()
     {
-        Get("/api/chats/{id:guid}");
+        Get("/api/chats/{id}");
 
         Description(x => x
             .WithName("GetChatById")
@@ -18,7 +18,7 @@ public class GetChatByIdEndpoint(ShippingDbContext dbContext) : EndpointWithoutR
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var chatId = Route<Guid>("id", true);
+        var chatId = Route<int>("id", true);
         var userId = User.GetUserId();
 
         var chat = await dbContext.Chats

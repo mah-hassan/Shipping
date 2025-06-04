@@ -67,6 +67,12 @@ public class ShippingDbContext : DbContext
         modelBuilder.Entity<PaymentInformation>()
             .Property(o => o.Amount)
             .HasPrecision(18, 2);
+        
+        // reviews
+        modelBuilder.Entity<Review>()
+            .HasOne(r => r.User)
+            .WithMany()
+            .OnDelete(DeleteBehavior.Restrict);
     }
 
 }

@@ -18,7 +18,7 @@ public class UpdateOfferStatusEndpoint(ShippingDbContext dbContext) : Endpoint<U
     }
     public override async Task HandleAsync(UpdateOfferStatusRequest req, CancellationToken ct)
     {
-        var offerId = Route<Guid>("id", true);
+        var offerId = Route<int>("id", true);
         var userId = User.GetUserId();
        
         var offer = await dbContext.Offers

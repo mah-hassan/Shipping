@@ -27,6 +27,8 @@ public class MappingProfile : IRegister
                 src => src.Owner.Email)
             .Map(dest => dest.OwnerPhoneNumber,
                 src => src.Owner.PhoneNumber)
+            .Map(dest => dest.AverageRating,
+                src => src.Reviews.Any() ? (double)Math.Min(src.Reviews.Average(r => r.Rating), 5) : 0)
             .Ignore(dest => dest.Logo)
             .Ignore(dest => dest.TradeLicense)
             .Ignore(dest => dest.Photos);

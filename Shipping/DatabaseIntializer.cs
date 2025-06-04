@@ -7,9 +7,9 @@ public class DatabaseInitializer(IServiceScope scope)
 {
     public async Task InitializeAsync()
     {
-        using var context = scope.ServiceProvider.GetRequiredService<ShippingDbContext>();
+        await using var context = scope.ServiceProvider.GetRequiredService<ShippingDbContext>();
        
-        // await context.Database.EnsureDeletedAsync();
+        await context.Database.EnsureDeletedAsync();
         await context.Database.MigrateAsync();
         await SeedRolesAsync(context);
         await SeedUsersAsync(context);

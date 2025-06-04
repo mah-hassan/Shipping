@@ -18,7 +18,7 @@ public class GetOrderByIdEndpoint(ShippingDbContext dbContext) : EndpointWithout
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var orderId = Route<Guid>("id", true);
+        var orderId = Route<int>("id", true);
        
         var order = await dbContext.Orders
             .Include(o => o.Owner)

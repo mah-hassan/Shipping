@@ -187,5 +187,4 @@
 /home/mahmoud/storage/projects/Shipping/Shipping/bin/Debug/net9.0/FluentEmail.Core.dll
 /home/mahmoud/storage/projects/Shipping/Shipping/bin/Debug/net9.0/FluentEmail.Smtp.dll
 /home/mahmoud/storage/projects/Shipping/Shipping/bin/Debug/net9.0/Otp.NET.dll
-/home/mahmoud/storage/projects/Shipping/Shipping/bin/Debug/net9.0/System.Formats.Asn1.dll
-/home/mahmoud/storage/projects/Shipping/Shipping/bin/Debug/net9.0/System.Text.Json.dll
+/home/mahmoud/storage/projects/Shipping/Shipping/obj/Debug/net9.0/Shipping.sourcelink.json

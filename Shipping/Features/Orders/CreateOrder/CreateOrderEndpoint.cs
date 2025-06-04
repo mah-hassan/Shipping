@@ -2,8 +2,7 @@
 
 namespace Shipping.Features.Orders.CreateOrder;
 
-public class CreateOrderEndpoint(ShippingDbContext dbContext,
-    IHttpContextAccessor contextAccessor) : Endpoint<OrderRequest>
+public class CreateOrderEndpoint(ShippingDbContext dbContext) : Endpoint<OrderRequest>
 {
     public override void Configure()
     {

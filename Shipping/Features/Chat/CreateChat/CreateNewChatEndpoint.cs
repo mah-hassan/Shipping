@@ -20,8 +20,8 @@ public class CreateNewChatEndpoint(ShippingDbContext dbContext) : EndpointWithou
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        Guid? companyId = Query<Guid?>("companyId", false);
-        Guid? orderId = Query<Guid?>("orderId", false);
+        int? companyId = Query<int?>("companyId", false);
+        int? orderId = Query<int?>("orderId", false);
 
         if (companyId is not null)
         {
@@ -58,7 +58,7 @@ public class CreateNewChatEndpoint(ShippingDbContext dbContext) : EndpointWithou
         await CreateOrRetrieveChatAsync(userId, admin.Id, ct);
     }
 
-    private async Task ChatWithOrderOwner(Guid orderId, CancellationToken ct)
+    private async Task ChatWithOrderOwner(int orderId, CancellationToken ct)
     {
         var orderOwner = await dbContext.Orders
             .Include(o => o.Owner)
@@ -78,28 +78,27 @@ public class CreateNewChatEndpoint(ShippingDbContext dbContext) : EndpointWithou
         await CreateOrRetrieveChatAsync(userId, orderOwner.Id, ct);
     }
 
-    private async Task ChatWithCompany(Guid companyId, CancellationToken ct)
+    private async Task ChatWithCompany(int companyId, CancellationToken ct)
     {
         var userId = User.GetUserId();
 
-        var companyOwnerId = await dbContext.Companies
+        var comapny = await dbContext.Companies
             .Where(c => c.Id == companyId)
-            .Select(c => c.OwnerId)
             .FirstOrDefaultAsync(ct);
 
-        if (companyOwnerId == Guid.Empty)
+        if (comapny is null)
         {
             await SendAsync(ApiResponse.Failure("company", "Company not found"),
                 StatusCodes.Status404NotFound, cancellation: ct);
             return;
         }
 
-        if (await PreventSelfChat(userId, companyOwnerId, ct)) return;
+        if (await PreventSelfChat(userId, comapny.OwnerId, ct)) return;
 
-        await CreateOrRetrieveChatAsync(userId, companyOwnerId, ct);
+        await CreateOrRetrieveChatAsync(userId, comapny.OwnerId, ct);
     }
 
-    private async Task CreateOrRetrieveChatAsync(Guid userId, Guid otherUserId, CancellationToken ct)
+    private async Task CreateOrRetrieveChatAsync(int userId, int otherUserId, CancellationToken ct)
     {
         var chat = await dbContext.Chats
             .Include(c => c.ParticipantOne)
@@ -141,7 +140,7 @@ public class CreateNewChatEndpoint(ShippingDbContext dbContext) : EndpointWithou
          await SendAsync(ApiResponse.Success(response), cancellation: ct);
     }
 
-    private async Task<bool> PreventSelfChat(Guid userId, Guid targetId, CancellationToken ct)
+    private async Task<bool> PreventSelfChat(int userId, int targetId, CancellationToken ct)
     {
         if (userId == targetId)
         {
@@ -152,14 +151,3 @@ public class CreateNewChatEndpoint(ShippingDbContext dbContext) : EndpointWithou
         return false;
     }
 }
-
-// public class ChatRequest
-// {
-//     [FromQuery]
-//     [Description("chat with company")]
-//     public Guid? CompanyId { get; init; } = null;
-//
-//     [Description("chat with order owner")]
-//     [FromQuery]
-//     public Guid? OrderId { get; init; } = null;
-// }

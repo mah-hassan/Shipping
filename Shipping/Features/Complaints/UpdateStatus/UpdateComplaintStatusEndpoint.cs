@@ -6,7 +6,7 @@ public class UpdateComplaintStatusEndpoint(ShippingDbContext dbContext) : Endpoi
 {
     public override void Configure()
     {
-        Patch("/api/complaints/{id:guid}");
+        Patch("/api/complaints/{id}");
         Roles(nameof(AppRoles.Admin));
         Description(x => x
             .Produces<ApiResponse>()
@@ -16,7 +16,7 @@ public class UpdateComplaintStatusEndpoint(ShippingDbContext dbContext) : Endpoi
     }
     public override async Task HandleAsync(UpdateComplaintStatusRequest req, CancellationToken ct)
     {
-        var complaintId = Route<Guid>("id", true);
+        var complaintId = Route<int>("id", true);
         var complaint = await dbContext.Complaints
             .Include(c => c.AgainstCompany)
             .FirstOrDefaultAsync(c => c.Id == complaintId, ct);
@@ -33,7 +33,8 @@ public class UpdateComplaintStatusEndpoint(ShippingDbContext dbContext) : Endpoi
             var notification = new Notification
             {
                 ReceiverId = complaint.SenderId,
-                Content = $"Your complaint against {complaint.AgainstCompany.Name} has been resolved"
+                Content = $"Your complaint against {complaint.AgainstCompany.Name} has been resolved",
+                Type = NotificationType.ComplaintResolved
             };
             dbContext.Notifications.Add(notification);
         }

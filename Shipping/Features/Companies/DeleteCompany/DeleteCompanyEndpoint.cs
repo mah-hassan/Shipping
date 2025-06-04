@@ -18,8 +18,9 @@ public class DeleteCompanyEndpoint(ShippingDbContext dbContext,
     
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var id = Route<Guid>("id", true);
+        var id = Route<int>("id", true);
         var company = await dbContext.Companies
+            .Include(c => c.Owner)
             .FirstOrDefaultAsync(c => c.Id == id, ct);
         
         if (company is null)
@@ -36,6 +37,7 @@ public class DeleteCompanyEndpoint(ShippingDbContext dbContext,
         }
         
         dbContext.Companies.Remove(company);
+        dbContext.Users.Remove(company.Owner);
         await dbContext.SaveChangesAsync(ct);
         
         fileService.DeleteFile(company.Logo);

@@ -56,7 +56,8 @@ public class CreateComplaintEndpoint(ShippingDbContext dbContext, IMapper mapper
             var adminNotification = new Notification
             {
                 ReceiverId = admin.Id,
-                Content = $"New complaint received from {order.Owner.FullName} against {order.Company!.Name}"
+                Content = $"New complaint received from {order.Owner.FullName} against {order.Company!.Name}",
+                Type = NotificationType.ComplaintReceived
             };
             dbContext.Notifications.Add(adminNotification);
         }
@@ -64,7 +65,8 @@ public class CreateComplaintEndpoint(ShippingDbContext dbContext, IMapper mapper
         var companyNotification = new Notification
         {
             ReceiverId = order.Company!.Id,
-            Content = $"New complaint received from {order.Owner.FullName} for order {order.Id}"
+            Content = $"New complaint received from {order.Owner.FullName} for order {order.Id}",
+            Type = NotificationType.ComplaintReceived
         };
         
         dbContext.Notifications.Add(companyNotification);
@@ -74,7 +76,7 @@ public class CreateComplaintEndpoint(ShippingDbContext dbContext, IMapper mapper
     }
 }
 public record ComplaintRequest(
-    Guid OrderId,
+    int OrderId,
     string Content,
     string Type
 );

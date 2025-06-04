@@ -2,7 +2,7 @@ namespace Shipping.Entities;
 
 public class Order : Entity
 {
-    public Order() : base(Guid.NewGuid())
+    public Order() 
     {
         
     }
@@ -16,10 +16,10 @@ public class Order : Entity
     public string? Details { get; set; }
     
     // owner information
-    public Guid OwnerId { get; set; } 
+    public int OwnerId { get; set; } 
     public User Owner { get; set; } 
     // company information
-    public Guid? CompanyId { get; set; } 
+    public int? CompanyId { get; set; } 
     public Company? Company { get; set; } 
     // offers
     public List<Offer> Offers { get; set; } = new();

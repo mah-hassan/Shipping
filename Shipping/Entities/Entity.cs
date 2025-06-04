@@ -1,7 +1,7 @@
 namespace Shipping.Entities;
 
-public abstract class Entity(Guid id)
+public abstract class Entity
 {
-    public Guid Id { get; init; } = id;
+    public int Id { get; init; }
     public DateTime CreatedAtUtc { get; init; } = DateTime.UtcNow;
 } 

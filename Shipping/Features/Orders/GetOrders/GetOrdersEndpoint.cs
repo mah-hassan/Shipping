@@ -48,11 +48,12 @@ public class GetOrdersEndpoint(ShippingDbContext dbContext,
         var ordersQuery = dbContext
             .Orders
             .Include(o => o.Owner)
-            .Where(o => o.CompanyId == company.Id);
+            .AsQueryable();
       
-        if (status is not null)
-            ordersQuery = ordersQuery.Where(o => o.Status == status);
-        
+        ordersQuery = status is not null ?
+            ordersQuery.Where(o => o.Status == status && o.CompanyId == company.Id) 
+            : ordersQuery.Where(o => o.Status == OrderStatus.Pending);
+
         var orders = await ordersQuery.AsNoTracking().ToListAsync(ct);
         foreach (Order order in orders)
         {
@@ -89,16 +90,3 @@ public class GetOrdersEndpoint(ShippingDbContext dbContext,
         return ordersQuery.ToListAsync(ct);
     }
 }
-
-public record OrderResponse(
-    Guid Id,
-    string PickupLocation,
-    string Destination,
-    int WeightInKg,
-    string PackageSize,
-    string OwnerName,
-    string? CompanyName,
-    string Status,
-    string? Details,
-    DateTime CreatedAtUtc
-);

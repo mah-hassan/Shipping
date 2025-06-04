@@ -44,12 +44,12 @@ public class CreateCompanyEndpoint(ShippingDbContext dbContext,
                     company.Photos.Add(filePath);
                 }
             }
-            company.Owner = await CreateOwnerAccount(req, company);
+            company.Owner = await CreateOwnerAccount(req);
             company.Status = CompanyStatus.Active;
             dbContext.Companies.Add(company);
-            var affectedRows = await dbContext.SaveChangesAsync(ct);
+            await dbContext.SaveChangesAsync(ct);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             fileService.DeleteFile(company.Logo);
             fileService.DeleteFile(company.TradeLicense);
@@ -67,7 +67,7 @@ public class CreateCompanyEndpoint(ShippingDbContext dbContext,
         response.Photos = company.Photos.Select(p => fileService.GetPublicUrl(p)).ToList();
         await SendOkAsync(ApiResponse.Success(response), ct);
     }
-    private async Task<User> CreateOwnerAccount(CreateCompanyRequest req, Company company)
+    private async Task<User> CreateOwnerAccount(CreateCompanyRequest req)
     {
         var role = await dbContext.Roles.FirstOrDefaultAsync(r => r.Name == nameof(AppRoles.CompanyOwner));
         if (role is null)
@@ -83,30 +83,4 @@ public class CreateCompanyEndpoint(ShippingDbContext dbContext,
         dbContext.Users.Add(owner);
         return owner;
     }
-}
-
-public class CompanyResponse
-{
-    public required Guid Id { get; set; }
-    public required string Name { get; set; } 
-    public required string Email { get; set; }
-    public required string PhoneNumber { get; set; }
-    public required string MainAddress { get; set; }
-    public required string ZipCode { get; set; }
-    public required string TaxNumber { get; set; }
-    public required string ResponsibleManger { get; set; } 
-    public TimeSpan WorkTime { get; set; }
-    public string Logo { get; set; } 
-    public string TradeLicense { get; set; } 
-    
-    // additional information (optional)
-    public List<string> Photos { get; set; } = new();
-    public string? About { get; set; }
-    public string? Description { get; set; }
-    public string? Advantages { get; set; }
-    public string? Disadvantages { get; set; }
-    // owner information
-    public string OwnerName { get; set; }
-    public string OwnerEmail { get; set; }
-    public string OwnerPhoneNumber { get; set; }
 }

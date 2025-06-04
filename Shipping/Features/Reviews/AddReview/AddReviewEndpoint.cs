@@ -49,7 +49,7 @@ public class AddReviewEndpoint(ShippingDbContext dbContext) : Endpoint<ReviewReq
             OrderId = orderId,
             CompanyId = order.CompanyId!.Value,
             Comment = req.Comment,
-            Rating = req.Rating,
+            Rating = Math.Min(req.Rating, 5),
             PackageDamaged = req.PackageDamaged,
             DeliveryLate = req.DeliveryLate
         };

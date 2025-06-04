@@ -1,6 +1,6 @@
 namespace Shipping.Features.Payments.ApplyPayment;
 
-public record PaymentRequest(Guid OrderId,
+public record PaymentRequest(int OrderId,
     string CardNumber,
     int ExpirationMonth,
     int ExpirationYear,

@@ -17,7 +17,7 @@ public class GetOfferByIdEndpoint(ShippingDbContext dbContext, IMapper mapper) :
     }
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var offerId = Route<Guid>("id", true);
+        var offerId = Route<int>("id", true);
      
         var offer = await dbContext.Offers
             .Include(o => o.Company)

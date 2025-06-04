@@ -48,8 +48,8 @@ public class GetPaymentsEndpoint(ShippingDbContext dbContext) : EndpointWithoutR
     }
 }
 
-public record PaymentResponse(Guid Id,
-    Guid OrderId,
+public record PaymentResponse(int Id,
+    int OrderId,
     string Status,
     string CustomerName,
     string? LastFourDigits,

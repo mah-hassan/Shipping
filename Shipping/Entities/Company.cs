@@ -1,7 +1,7 @@
 namespace Shipping.Entities;
 public class Company : Entity
 {
-    public Company() : base(Guid.NewGuid())
+    public Company()
     {
 
     }
@@ -25,6 +25,8 @@ public class Company : Entity
     public string? Advantages { get; set; }
     public string? Disadvantages { get; set; }
     // owner information
-    public Guid OwnerId { get; set; } 
+    public int OwnerId { get; set; } 
     public User Owner { get; set; } 
+    // reviews
+    public ICollection<Review> Reviews { get; set; } = new List<Review>();
 }

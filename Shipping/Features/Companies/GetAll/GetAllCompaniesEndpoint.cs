@@ -21,7 +21,9 @@ public class GetAllCompaniesEndpoint(ShippingDbContext dbContext,
     {
         var role = User.GetRole();
         var companiesQuery = dbContext.Companies
-            .Include(c => c.Owner).AsNoTracking();
+            .Include(c => c.Owner)
+            .Include(c => c.Reviews)
+            .AsNoTracking();
 
         List<Company> companies;
         if (role == AppRoles.Customer)

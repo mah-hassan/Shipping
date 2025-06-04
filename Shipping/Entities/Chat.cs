@@ -2,12 +2,12 @@ namespace Shipping.Entities;
 
 public class Chat : Entity
 {
-    public Chat() : base(Guid.NewGuid()) {}
+    public Chat() {}
 
-    public Guid ParticipantOneId { get; set; }
+    public int ParticipantOneId { get; set; }
     public User ParticipantOne { get; set; }
 
-    public Guid ParticipantTwoId { get; set; }
+    public int ParticipantTwoId { get; set; }
     public User ParticipantTwo { get; set; }
     public DateTime LastMessageAtUtc { get; set; }
     public ICollection<Message> Messages { get; set; } = new List<Message>();

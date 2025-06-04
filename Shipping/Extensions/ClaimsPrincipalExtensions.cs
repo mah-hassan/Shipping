@@ -6,12 +6,12 @@ namespace Shipping.Extensions;
 
 public static class ClaimsPrincipalExtensions
 {
-    public static Guid GetUserId(this ClaimsPrincipal user)
+    public static int GetUserId(this ClaimsPrincipal user)
     {
         var value = user.FindFirstValue(ClaimTypes.NameIdentifier);
         return string.IsNullOrEmpty(value) ?
             throw new NullReferenceException("user id does not exist")
-            : new Guid(value);
+            : int.Parse(value);
     }
     public static AppRoles GetRole(this ClaimsPrincipal user)
     {

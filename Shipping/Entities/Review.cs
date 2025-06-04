@@ -1,11 +1,11 @@
 namespace Shipping.Entities;
 
-public class Review() : Entity(Guid.NewGuid())
+public class Review() : Entity
 {
-    public Guid UserId { get; set; }
+    public int UserId { get; set; }
     public User User { get; set; }
-    public Guid OrderId { get; set; }
-    public Guid CompanyId { get; set; }
+    public int OrderId { get; set; }
+    public int CompanyId { get; set; }
     
     public string? Comment { get; set; } = string.Empty;
     public int Rating { get; set; }

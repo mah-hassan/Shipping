@@ -19,9 +19,10 @@ public class GetCompanyByIdEndpoint(ShippingDbContext dbContext,
     }
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var id = Route<Guid>("id", true);
+        var id = Route<int>("id", true);
         var company = await dbContext.Companies
             .Include(c => c.Owner)
+            .Include(c => c.Reviews)
             .FirstOrDefaultAsync(c => c.Id == id, ct);
         
         if (company is null)

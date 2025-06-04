@@ -14,13 +14,13 @@ public class GetOffersEndpoint(ShippingDbContext dbContext, IMapper mapper) : En
             .Produces(StatusCodes.Status404NotFound)
             .WithTags("offers"));
     }
-
+    
     public override Task HandleAsync(CancellationToken ct)
     {
         var role = User.GetRole();
         if (role is AppRoles.Customer)
         {
-            var orderId = Query<Guid>("orderId");
+            var orderId = Query<int>("orderId");
             return GetOffersForOrder(orderId, ct);
         }
         else if (role is AppRoles.CompanyOwner)
@@ -35,7 +35,7 @@ public class GetOffersEndpoint(ShippingDbContext dbContext, IMapper mapper) : En
         
     }
 
-    private async Task GetOffersForOrder(Guid orderId, CancellationToken ct)
+    private async Task GetOffersForOrder(int orderId, CancellationToken ct)
     {
         var order = await dbContext.Orders.FindAsync(orderId, ct);
         
@@ -101,16 +101,3 @@ public class GetOffersEndpoint(ShippingDbContext dbContext, IMapper mapper) : En
         return;
     }
 }
-public record OfferResponse(
-    Guid Id,
-    Guid OrderId,
-    string CustomerName,
-    Guid CompanyId,
-    string CompanyName,
-    decimal Price,
-    int EstimatedDeliveryTimeInDays,
-    string? Notes,
-    string Status,
-    DateTime CreatedAtUtc,
-    DateTime DeliveryDateUtc
-);

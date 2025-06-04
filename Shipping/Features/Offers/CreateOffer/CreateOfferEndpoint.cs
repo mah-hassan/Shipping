@@ -59,7 +59,7 @@ public class CreateOfferEndpoint(ShippingDbContext dbContext, IMapper mapper) : 
 }
 
 public record OfferRequest(
-    Guid OrderId,
+    int OrderId,
     decimal Price,
     int EstimatedDeliveryTimeInDays,
     string? Notes);

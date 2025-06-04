@@ -8,7 +8,7 @@ namespace Shipping.Hubs.ChatHub;
 [Authorize] 
 public class ChatHub(ShippingDbContext dbContext) : Hub<IChatClient>
 {
-    private readonly HashSet<Guid> connectedUsers = new();
+    private readonly HashSet<int> connectedUsers = new();
     public override async Task OnConnectedAsync()
     {
         var userId = Context.User?.GetUserId(); 
@@ -56,7 +56,7 @@ public class ChatHub(ShippingDbContext dbContext) : Hub<IChatClient>
         await base.OnDisconnectedAsync(exception);
     }
 
-    public async Task SendMessage(Guid chatId, string content)
+    public async Task SendMessage(int chatId, string content)
     {
         var senderId = Context.User!.GetUserId();
 
@@ -112,5 +112,5 @@ public class ChatHub(ShippingDbContext dbContext) : Hub<IChatClient>
         await Clients.Group(GetGroupName(chatId)).ReceiveMessage(dto);
     }
 
-    private static string GetGroupName(Guid chatId) => $"chat-{chatId}";
+    private static string GetGroupName(int chatId) => $"chat-{chatId}";
 }

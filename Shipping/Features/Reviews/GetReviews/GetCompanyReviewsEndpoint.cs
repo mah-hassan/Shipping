@@ -28,4 +28,4 @@ public class GetCompanyReviewsEndpoint(ShippingDbContext dbContext) : Endpoint<G
         await SendOkAsync(ApiResponse.Success(reviews), ct);
     }
 }
-public record GetReviewsRequest([property: QueryParam(IsRequired = true)] Guid CompanyId);
+public record GetReviewsRequest([property: QueryParam(IsRequired = true)] int CompanyId);

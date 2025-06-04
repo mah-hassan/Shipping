@@ -1,7 +1,7 @@
 namespace Shipping.Entities;
 public class User : Entity
 {
-    public User() : base(Guid.NewGuid())
+    public User() 
     {
     }
     

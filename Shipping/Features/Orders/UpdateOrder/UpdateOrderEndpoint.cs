@@ -20,7 +20,7 @@ public class UpdateOrderEndpoint(ShippingDbContext dbContext) : Endpoint<OrderRe
     public override async Task HandleAsync(OrderRequest req, CancellationToken ct)
     {
         var userId = User.GetUserId();
-        var orderId = Route<Guid>("id", true);
+        var orderId = Route<int>("id", true);
         
         var order = await dbContext.Orders
             .FirstOrDefaultAsync(o => o.Id == orderId, ct);
