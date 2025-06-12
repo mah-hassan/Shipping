@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/mahmoud/storage/projects/Shipping/Shipping/Shipping.csproj": {}
+    "C:\\GP\\Shipping\\Shipping\\Shipping.csproj": {}
   },
   "projects": {
-    "/home/mahmoud/storage/projects/Shipping/Shipping/Shipping.csproj": {
+    "C:\\GP\\Shipping\\Shipping\\Shipping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mahmoud/storage/projects/Shipping/Shipping/Shipping.csproj",
+        "projectUniqueName": "C:\\GP\\Shipping\\Shipping\\Shipping.csproj",
         "projectName": "Shipping",
-        "projectPath": "/home/mahmoud/storage/projects/Shipping/Shipping/Shipping.csproj",
-        "packagesPath": "/home/mahmoud/.nuget/packages/",
-        "outputPath": "/home/mahmoud/storage/projects/Shipping/Shipping/obj/",
+        "projectPath": "C:\\GP\\Shipping\\Shipping\\Shipping.csproj",
+        "packagesPath": "C:\\Users\\mosa\\.nuget\\packages\\",
+        "outputPath": "C:\\GP\\Shipping\\Shipping\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/mahmoud/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,6 +86,12 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Otp.NET": {
               "target": "Package",
               "version": "[1.4.0, )"
@@ -104,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

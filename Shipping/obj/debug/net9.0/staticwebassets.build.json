@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p+RIYyfmBzLUO7xCc2SUEY1AK/T76nQkBcHQAB+qYww=",
+  "Hash": "1mbJIEe0e7QypC+SQuujdS6/+oWU+hixmg8CwfcJS9U=",
   "Source": "Shipping",
   "BasePath": "_content/Shipping",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Shipping/wwwroot",
+      "Name": "Shipping\\wwwroot",
       "Source": "Shipping",
-      "ContentRoot": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/",
+      "ContentRoot": "C:\\GP\\Shipping\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
+      "Identity": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/",
+      "ContentRoot": "C:\\GP\\Shipping\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "q4WuvIwjZmhDzEn7srM2XV56JXNfb9ZruTIJ61wjfdw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg"
+      "OriginalItemSpec": "wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg"
     },
     {
-      "Identity": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
+      "Identity": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/",
+      "ContentRoot": "C:\\GP\\Shipping\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "1srtN+2En39+z7DLOM2CagFvisU14IJNYzojt86IIgw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg"
+      "OriginalItemSpec": "wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg"
     },
     {
-      "Identity": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
+      "Identity": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/",
+      "ContentRoot": "C:\\GP\\Shipping\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "Integrity": "1srtN+2En39+z7DLOM2CagFvisU14IJNYzojt86IIgw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg"
+      "OriginalItemSpec": "wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg"
     },
     {
-      "Identity": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
+      "Identity": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/",
+      "ContentRoot": "C:\\GP\\Shipping\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -98,13 +98,13 @@
       "Integrity": "q4WuvIwjZmhDzEn7srM2XV56JXNfb9ZruTIJ61wjfdw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg"
+      "OriginalItemSpec": "wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg"
     }
   ],
   "Endpoints": [
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -125,7 +125,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:14 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -141,7 +141,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.v3a6tg1itn.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\0698eaaa-c1a0-4915-8286-09b9258d9844.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -162,7 +162,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:14 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -186,7 +186,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.a7p1hhgw7d.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -207,7 +207,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:43 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -231,7 +231,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4c102d36-9512-4f25-b846-f7b584d6e571.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -252,7 +252,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:43 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -268,7 +268,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.a7p1hhgw7d.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -289,7 +289,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:14 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -313,7 +313,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\4f94694b-3af7-4535-a47b-9ba6f6f78481.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -334,7 +334,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:14 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -350,7 +350,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -371,7 +371,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:45 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -387,7 +387,7 @@
     },
     {
       "Route": "companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.v3a6tg1itn.jpeg",
-      "AssetFile": "/home/mahmoud/storage/projects/Shipping/Shipping/wwwroot/companies/797259dd-9f77-459a-9d03-90e8cdbbce3d/bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
+      "AssetFile": "C:\\GP\\Shipping\\Shipping\\wwwroot\\companies\\797259dd-9f77-459a-9d03-90e8cdbbce3d\\bc306277-ff16-4d18-955e-8d149998dd7d.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -408,7 +408,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 00:13:45 GMT"
+          "Value": "Sun, 08 Jun 2025 12:37:16 GMT"
         },
         {
           "Name": "Cache-Control",

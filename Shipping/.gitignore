@@ -1,0 +1,23 @@
+# Build outputs
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# User-specific files
+*.user
+*.suo
+
+# VS settings
+.vs/
+.vscode/
+.idea/
+
+# Publish profiles
+*.pubxml
+*.publishproj
+
+# Other
+*.cache
+*.log
