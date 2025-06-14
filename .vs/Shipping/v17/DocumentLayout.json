@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GP\\Shipping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{755E92CC-E408-45C1-899F-ED6DDF77DFDD}|Shipping\\Shipping.csproj|c:\\gp\\shipping\\shipping\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{755E92CC-E408-45C1-899F-ED6DDF77DFDD}|Shipping\\Shipping.csproj|solutionrelative:shipping\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{755E92CC-E408-45C1-899F-ED6DDF77DFDD}|Shipping\\Shipping.csproj|c:\\gp\\shipping\\shipping\\features\\offers\\getoffers\\offerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{755E92CC-E408-45C1-899F-ED6DDF77DFDD}|Shipping\\Shipping.csproj|solutionrelative:shipping\\features\\offers\\getoffers\\offerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\GP\\Shipping\\Shipping\\.gitignore",
+              "RelativeDocumentMoniker": "Shipping\\.gitignore",
+              "ToolTip": "C:\\GP\\Shipping\\Shipping\\.gitignore",
+              "RelativeToolTip": "Shipping\\.gitignore",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd\u002BUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN6SURBVEhLxZbPTxNBFMenlfCr2B\u002BQcIBaghc8FRJ7InLCowdJpFYSGgsoQf8B/wQTDx44rB7Vf8Ng8QIxJoREQiKkP6AFwo/Wbml329Kp783MLm1327Qc9Nt\u002B\u002BmbeTGd23rzZXfJPValULKKoy263D/b29jqwDO3MZybWUtVusVige\u002BXk9PT0UrhMZZgwFApJfr9/ubOzk1BKmU8fFiaglNcq\u002BBETZmUZJ1RlWX63urr6fnt7\u002Bw9raEU4YTKZpKVSiRaRIqdQLHIKVRYoQnlra4vCJDQcDuelDx/fTk5O9ovhDLolrK6JiYlH09PTPpvNxlfAvyD\u002BqxvhxxCdnZ0RjIjb7e6Adfv6BwZuFwqFn7FYLM86V8kqrC4tTGLcWlVNVq9yuUysViu5OzraNe71hrze8TeiqUYdwtYIB/y\u002Bvk5UVRWexhoaGsL9IxsbGwS2gV0w7L3tipa9oktzBYNBKZFIsH1TC4VrVI6ioahgAbDpdJoeHZ8Ijmk0Fqcrr15/FUPWyBBSFEYsm82STCZThcysrAGZyW2GQOJAOC0ci5U47HbzuINM9xCJRCNkf28f2OPs/wbQVgPtwJ6wGmwc8ywwan5\u002BXjo4OGQpr4XxOpQijFoZwwrkNfIKzQGpVJour6yYhtSQNNp17ez8YqHSZHq9Bid3jI3dY1EyU8NjMTzsJp6REeLxcEYQqDNEnbUzPNDHQ\u002B6AD2Eyn88kaXAP4eNwOojL6SIuVz\u002BAVsB8LuLUfc66uksfx0zGkGI/YB3PoaJwZ5t6MDVFaKMl1mtubk6Kx\u002BM8UURS1CSGjqInSQ25PD1PpejSi5etnUOxQHJ0fEQSicMmJBrCxmknabArrJDAynRUHYWhICqUNYSf3Q7ZXOYTGhQIPJPw1pSHkOqhE\u002BEzDSGSQ/L0UnB\u002BcUEXFpdaO4fsymCVPzY3CTxieL1N3ff54F8t/u9pICBFozEqZ3PAZXPkLM2YgCsMLSy2mDRiD/FRg3caU2DluHp48pu2o2iFv57Uq8E5rJDd3R0Y\u002BPrW1o684/AobHUnZv1\u002BKRKJ6AlwEzCkweehFp\u002BHbInQAK8LN4VJjFMvw2vik9lZaebxzHJXdzfLtEr9ayGr8jKv4g\u002B8VqBb9C1elUh47dval8\u002BfHjJHlQwT9vX1Dfb09Dj4BfIBNOm1Zm0oqEDS5bNZOSk8/0uE/AXIEKQxGZjWvAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-06-14T13:33:24.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OfferResponse.cs",
+              "DocumentMoniker": "C:\\GP\\Shipping\\Shipping\\Features\\Offers\\GetOffers\\OfferResponse.cs",
+              "RelativeDocumentMoniker": "Shipping\\Features\\Offers\\GetOffers\\OfferResponse.cs",
+              "ToolTip": "C:\\GP\\Shipping\\Shipping\\Features\\Offers\\GetOffers\\OfferResponse.cs",
+              "RelativeToolTip": "Shipping\\Features\\Offers\\GetOffers\\OfferResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:23:11.183Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

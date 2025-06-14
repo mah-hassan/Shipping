@@ -11,5 +11,5 @@ public record OfferResponse(
     string? Notes,
     string Status,
     DateTime CreatedAtUtc,
-    DateTime DeliveryDateUtc
+    DateTime? DeliveryDateUtc
 );
