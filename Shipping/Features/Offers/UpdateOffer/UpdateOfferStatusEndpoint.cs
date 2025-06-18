@@ -91,7 +91,7 @@ public class UpdateOfferStatusEndpoint(ShippingDbContext dbContext) : Endpoint<U
             offer.Status = OfferStatus.Accepted;
             offer.DeliveryDateUtc = DateTime.UtcNow.AddDays(offer.EstimatedDeliveryTimeInDays);
             offer.Order.Status = OrderStatus.Placed;
-         
+            offer.Order.CompanyId = offer.CompanyId;
             var companyNotification = new Notification
             {
                 ReceiverId = offer.CompanyId,
@@ -111,6 +111,7 @@ public class UpdateOfferStatusEndpoint(ShippingDbContext dbContext) : Endpoint<U
         {
             offer.Status = OfferStatus.Accepted;
             offer.Order.Status = OrderStatus.PendingPayment;
+            offer.Order.CompanyId = offer.CompanyId;
             var paymentInfo = new PaymentInformation()
             {
                 Status = PaymentStatus.Pending,
