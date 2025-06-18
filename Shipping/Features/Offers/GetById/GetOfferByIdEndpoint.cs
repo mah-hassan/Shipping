@@ -18,21 +18,37 @@ public class GetOfferByIdEndpoint(ShippingDbContext dbContext, IMapper mapper) :
     public override async Task HandleAsync(CancellationToken ct)
     {
         var offerId = Route<int>("id", true);
-     
-        var offer = await dbContext.Offers
-            .Include(o => o.Company)
-            .Include(o => o.Order)
-            .ThenInclude(or => or.Owner)
-            .ProjectToType<OfferResponse>()
-            .FirstOrDefaultAsync(o => o.Id == offerId, ct);
 
-        if (offer is null)
+        //var offer = await dbContext.Offers
+        //    .Include(o => o.Company)
+        //    .Include(o => o.Order)
+        //    .ThenInclude(or => or.Owner)
+        //    .ProjectToType<OfferResponse>()
+        //    .FirstOrDefaultAsync(o => o.Id == offerId, ct);
+
+        //if (offer is null)
+        //{
+        //    await SendAsync(ApiResponse.Failure("offer", "Offer not found"),
+        //        StatusCodes.Status404NotFound, ct);
+        //    return;
+        //}
+
+        //await SendOkAsync(offer, ct);
+        var offerEntity = await dbContext.Offers
+    .Include(o => o.Company)
+    .Include(o => o.Order)
+    .ThenInclude(or => or.Owner)
+    .FirstOrDefaultAsync(o => o.Id == offerId, ct);
+
+        if (offerEntity is null)
         {
             await SendAsync(ApiResponse.Failure("offer", "Offer not found"),
                 StatusCodes.Status404NotFound, ct);
             return;
         }
-        
+
+        var offer = mapper.Map<OfferResponse>(offerEntity); // ?? ?????? ProjectToType ?????? ??? ?? ????
         await SendOkAsync(offer, ct);
+
     }
 }
