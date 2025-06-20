@@ -17,7 +17,12 @@ public class MappingProfile : IRegister
             .Map(dest => dest.OwnerName,
                 src => src.Owner.FullName)
             .Map(dest => dest.CompanyName,
-                src => src.Company != null ? src.Company.Name : null);
+                src => src.Company != null ? src.Company.Name : null)
+            .Map(dest => dest.DeliveredAtUtc, src => src.Offers
+                .Select(o => o.DeliveryDateUtc)
+                .FirstOrDefault())
+            .Map(dest => dest.Price, src => src.Offers
+                .Select(o => o.Price).FirstOrDefault());
         
         config
             .NewConfig<Company, CompanyResponse>()

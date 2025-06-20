@@ -10,5 +10,7 @@ public record OrderResponse(
     string? CompanyName,
     string Status,
     string? Details,
-    DateTime CreatedAtUtc
+    DateTime CreatedAtUtc,
+    DateTime? DeliveredAtUtc,
+    decimal Price = 0.0m
 );

@@ -72,14 +72,14 @@ public class GetOffersEndpoint(ShippingDbContext dbContext, IMapper mapper) : En
         //    .ProjectToType<OfferResponse>()
         //    .ToListAsync(ct);
         var offers = await dbContext.Offers
-    .Where(o => o.OrderId == orderId)
-    .Include(o => o.Company)
-    .Include(o => o.Order)
-        .ThenInclude(order => order.Owner)
-    .AsSplitQuery()
-    .AsNoTracking()
-    .ProjectToType<OfferResponse>()
-    .ToListAsync(ct);
+                        .Where(o => o.OrderId == orderId)
+                        .Include(o => o.Company)
+                        .Include(o => o.Order)
+                            .ThenInclude(order => order.Owner)
+                        .AsSplitQuery()
+                        .AsNoTracking()
+                        .ProjectToType<OfferResponse>()
+                        .ToListAsync(ct);
 
         await SendOkAsync(offers, ct);
         return;

@@ -40,19 +40,33 @@ public class GetOrdersEndpoint(ShippingDbContext dbContext,
         
         var company = await dbContext
             .Companies
-            .FirstOrDefaultAsync(c => c.OwnerId == companyOwnerId, ct);
-        
-        if (company is null)
-            throw new InvalidOperationException("company not found");
-        
+            .FirstOrDefaultAsync(c => c.OwnerId == companyOwnerId, ct) ?? throw new InvalidOperationException("company not found");
+
         var ordersQuery = dbContext
             .Orders
             .Include(o => o.Owner)
+            .Include(o => o.Offers.Where(of => of.Status == OfferStatus.Accepted))
             .AsQueryable();
-      
-        ordersQuery = status is not null ?
-            ordersQuery.Where(o => o.Status == status && o.CompanyId == company.Id) 
-            : ordersQuery.Where(o => o.Status == OrderStatus.Pending);
+
+        if(status is not null && status is not OrderStatus.Pending)
+        {
+            ordersQuery = ordersQuery.Where(o => o.Status == status && o.CompanyId == company.Id);
+        }
+        else if (status is OrderStatus.Pending)
+        {
+            var companyOffersOrderIds = await dbContext
+                .Offers
+                .Where(o => o.CompanyId == company.Id)
+                .Select(o => o.OrderId)
+                .ToListAsync(ct);
+
+            ordersQuery = ordersQuery
+                        .Where(o => companyOffersOrderIds.Contains(o.Id) && o.Status == OrderStatus.Pending);
+        }
+        else
+        {
+            ordersQuery = ordersQuery.Where(o => o.Status == OrderStatus.Pending);
+        }
 
         var orders = await ordersQuery.AsNoTracking().ToListAsync(ct);
         foreach (Order order in orders)

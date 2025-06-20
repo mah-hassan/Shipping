@@ -115,7 +115,8 @@ public class UpdateOfferStatusEndpoint(ShippingDbContext dbContext) : Endpoint<U
             var paymentInfo = new PaymentInformation()
             {
                 Status = PaymentStatus.Pending,
-                OrderId = offer.OrderId
+                OrderId = offer.OrderId,
+                Amount = offer.Price
             };
             dbContext.PaymentInformation.Add(paymentInfo);
         }

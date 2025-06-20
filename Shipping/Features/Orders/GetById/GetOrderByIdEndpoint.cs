@@ -3,7 +3,7 @@ using Shipping.Features.Orders.GetOrders;
 
 namespace Shipping.Features.Orders.GetById;
 
-public class GetOrderByIdEndpoint(ShippingDbContext dbContext) : EndpointWithoutRequest
+public class GetOrderByIdEndpoint(ShippingDbContext dbContext, IMapper mapper) : EndpointWithoutRequest
 {
     public override void Configure()
     {
@@ -23,7 +23,7 @@ public class GetOrderByIdEndpoint(ShippingDbContext dbContext) : EndpointWithout
         var order = await dbContext.Orders
             .Include(o => o.Owner)
             .Include(o => o.Company)
-            .ProjectToType<OrderResponse>()
+            .Include(o => o.Offers.Where(of => of.Status == OfferStatus.Accepted))
             .FirstOrDefaultAsync(o => o.Id == orderId, ct);
       
         if (order is null)
@@ -33,6 +33,6 @@ public class GetOrderByIdEndpoint(ShippingDbContext dbContext) : EndpointWithout
             return;
         }
         
-        await SendOkAsync(order, ct);
+        await SendOkAsync(mapper.Map<OrderResponse>(order), ct);
     }
 }

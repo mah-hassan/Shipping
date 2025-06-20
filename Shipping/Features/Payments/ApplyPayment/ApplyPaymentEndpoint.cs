@@ -22,6 +22,7 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
     {
         var userId = User.GetUserId();
         var order = await dbContext.Orders
+            .Include(o => o.Offers.FirstOrDefault(of => of.Status == OfferStatus.Accepted))
             .FirstOrDefaultAsync(o => o.Id == req.OrderId, ct);
         
         if (order is null)
@@ -53,8 +54,9 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
         paymentInfo.UpdatedAtUtc = DateTime.UtcNow;
 
         order.Status = OrderStatus.Placed;
-        
-        
+        var offer = order.Offers[0];
+        offer.DeliveryDateUtc = DateTime.UtcNow.AddDays(offer.EstimatedDeliveryTimeInDays);
+                
         var userNotification = new Notification
         {
             ReceiverId =  userId,
@@ -66,6 +68,7 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
         
         dbContext.PaymentInformation.Update(paymentInfo);
         dbContext.Orders.Update(order);
+        dbContext.Offers.Update(offer);
         await dbContext.SaveChangesAsync(ct);
         
         await SendOkAsync(ApiResponse.Success(), ct);
