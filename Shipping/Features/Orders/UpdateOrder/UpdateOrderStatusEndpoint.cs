@@ -41,7 +41,7 @@ public class UpdateOrderStatusEndpoint(ShippingDbContext dbContext) : Endpoint<U
 
         var status = Enum.Parse<OrderStatus>(req.Status, true);
         
-        if (status is not OrderStatus.Shipped or OrderStatus.Delivered)
+        if (status is not OrderStatus.Shipped and not OrderStatus.Delivered)
         {
             await SendAsync(ApiResponse.Failure("order", "You can only update to Shipped or Delivered status"),
                 StatusCodes.Status400BadRequest, ct);
