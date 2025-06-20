@@ -65,7 +65,13 @@ public class GetOrdersEndpoint(ShippingDbContext dbContext,
         }
         else
         {
-            ordersQuery = ordersQuery.Where(o => o.Status == OrderStatus.Pending);
+             var companyOffersOrderIds = await dbContext
+                .Offers
+                .Where(o => o.CompanyId == company.Id)
+                .Select(o => o.OrderId)
+                .ToListAsync(ct);
+
+            ordersQuery = ordersQuery.Where(o => o.Status == OrderStatus.Pending && !companyOffersOrderIds.Contains(o.Id));
         }
 
         var orders = await ordersQuery.AsNoTracking().ToListAsync(ct);
