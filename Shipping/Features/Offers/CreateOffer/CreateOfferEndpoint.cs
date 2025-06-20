@@ -18,7 +18,7 @@ public class CreateOfferEndpoint(ShippingDbContext dbContext, IMapper mapper) : 
 
     public override async Task HandleAsync(OfferRequest req, CancellationToken ct)
     {
-        var order = await dbContext.Orders
+        var order = await dbContext.Orders.Include(o => o.Owner)
             .FirstOrDefaultAsync(o => o.Id == req.OrderId, ct);
         
         if (order is null)
@@ -50,6 +50,7 @@ public class CreateOfferEndpoint(ShippingDbContext dbContext, IMapper mapper) : 
         offer.Order = order;
         offer.Status = OfferStatus.Pending;
         
+
         dbContext.Offers.Add(offer);
         await dbContext.SaveChangesAsync(ct);
         
