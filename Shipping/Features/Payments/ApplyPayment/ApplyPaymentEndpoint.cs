@@ -22,7 +22,9 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
     {
         var userId = User.GetUserId();
         var order = await dbContext.Orders
-            .Include(o => o.Offers.FirstOrDefault(of => of.Status == OfferStatus.Accepted))
+            //.Include(o => o.Offers.FirstOrDefault(of => of.Status == OfferStatus.Accepted))
+            .Include(o => o.Offers)
+
             .FirstOrDefaultAsync(o => o.Id == req.OrderId, ct);
         
         if (order is null)
@@ -38,7 +40,15 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
                 StatusCodes.Status403Forbidden, ct);
             return;
         }
-        
+        /************/
+        var offer = order.Offers.FirstOrDefault(of => of.Status == OfferStatus.Accepted);
+        if (offer is null)
+        {
+            await SendAsync(ApiResponse.Failure("order", "No accepted offer found"),
+                StatusCodes.Status400BadRequest, ct);
+            return;
+        }
+/******************/
         var paymentInfo = await dbContext.PaymentInformation
             .FirstOrDefaultAsync(p => p.OrderId == req.OrderId, ct);
 
@@ -54,9 +64,10 @@ public class ApplyPaymentEndpoint(ShippingDbContext dbContext) : Endpoint<Paymen
         paymentInfo.UpdatedAtUtc = DateTime.UtcNow;
 
         order.Status = OrderStatus.Placed;
-        var offer = order.Offers[0];
+        //var offer = order.Offers[0];
+        //offer.DeliveryDateUtc = DateTime.UtcNow.AddDays(offer.EstimatedDeliveryTimeInDays);
         offer.DeliveryDateUtc = DateTime.UtcNow.AddDays(offer.EstimatedDeliveryTimeInDays);
-                
+
         var userNotification = new Notification
         {
             ReceiverId =  userId,
